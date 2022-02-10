@@ -38,7 +38,7 @@ maps = home_about + maps
 #application = dash.Dash(external_stylesheets=[dbc.themes.SLATE])
 application = dash.Dash(external_stylesheets=[dbc.themes.CERULEAN])
 
-PLOTLY_LOGO = "./app/static/img/logo.png"
+PLOTLY_LOGO = "./static/img/logo.png"
 
 
 
@@ -53,7 +53,7 @@ search_bar = dbc.Row(
         ),
     ],
     className="g-0 ms-auto flex-nowrap mt-3 mt-md-0",
-    align="center",
+    align="right",
 )
 
 
@@ -66,25 +66,25 @@ navbar = dbc.Navbar(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        #dbc.Col(dbc.Button("Sidebar", outline=True, color="secondary", className="mr-1", id="btn_sidebar"), width="auto"),
+                        
                         dbc.Col(html.Img(src=PLOTLY_LOGO, height="30px")),
                         dbc.Col(dbc.NavbarBrand("IX Water", className="ms-2")),
                     ],
-                    align="center",
+                    align="right",
                     className="g-0",
                 ),
                 href="https://ixwater.com",
                 style={"textDecoration": "none"},
             ),
             dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
-            dbc.Button("Sidebar", outline=True, color="secondary", className="mr-2", id="btn_sidebar"),
+            dbc.Button("Sidebar", outline=True, color="secondary", className="ms-2", id="btn_sidebar"),
             dbc.Collapse(
                 search_bar,
                 id="navbar-collapse",
                 is_open=False,
                 navbar=True,
             ),
-            #dbc.Button("Sidebar", outline=True, color="secondary", className="mr-1", id="btn_sidebar"),
+            
         ]
     ),
     color="dark",
