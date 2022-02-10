@@ -9,7 +9,11 @@ pip install dash_bootstrap_components
 pip freeze > requirements.txt
 make all
 ```
+This has been moved to app runner.  
 
+See:  https://www.coursera.org/learn/cloud-machine-learning-engineering-mlops-duke/lecture/FOjTX/continuously-deploy-flask-ml-application
+
+use the github method, not containers - ecr.
 
 #  from here:
 
