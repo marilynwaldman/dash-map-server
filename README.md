@@ -2,14 +2,14 @@
 # set up a clean environment
 
 ```
-python3 -m venv ~/.eb
-source ~/.eb/bin/activate
+python3 -m venv ~/.dash
+source ~/.dash/bin/activate
 pip install dash
 pip install dash_bootstrap_components
 pip freeze > requirements.txt
 make all
 ```
-This has been moved to app runner.  
+This has been moved to app runner using github. 
 
 See:  https://www.coursera.org/learn/cloud-machine-learning-engineering-mlops-duke/lecture/FOjTX/continuously-deploy-flask-ml-application
 

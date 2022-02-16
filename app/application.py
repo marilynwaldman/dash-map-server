@@ -220,7 +220,7 @@ def toggle_sidebar(n, nclick):
 
 @application.callback(
 
-    [Output(f"page-" + str(map) + "-link", "active") for map in maps],
+    [Output("page-" + str(map) + "-link", "active") for map in maps],
     [Input("url", "pathname")],
 )   
 
@@ -231,7 +231,7 @@ def toggle_active_links(pathname):
         #list = [False for i in len(maps)]
         #list[0] = True
         return [True] + [False for i in range(len(maps)-1)]
-    return [pathname == f"/" + str(map) for map in maps]
+    return [pathname == "/" + str(map) for map in maps]
 
 
 @application.callback(Output("page-content", "children"), [Input("url", "pathname")])
@@ -254,7 +254,7 @@ def render_page_content(pathname):
         [
             html.H1("404: Not found", className="text-danger"),
             html.Hr(),
-            html.P(f"The pathname {pathname} was not recognised..."),
+            html.P("The pathname {pathname} was not recognised..."),
         ]
     )
 
